@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    &_item{
+        margin-right: 3em; 
+        padding: 1.5em; 
+    }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.active{
+    color: red;
+}
