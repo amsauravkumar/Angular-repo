@@ -11,7 +11,10 @@
   <a routerLinkActive="active" [routerLink]="['/contactus']">
     <div class="header_item">Contact us</div>
   </a>
-  <a routerLinkActive="active" [routerLink]="['/login/88']">
+  <a routerLinkActive="active" [routerLink]="['/login/88/edit']"
+  [queryParams]="{allowLoading : '1'}"
+  [fragment]= "'loading'"
+  >
     <div class="header_item">Login</div>
   </a>
 </div>

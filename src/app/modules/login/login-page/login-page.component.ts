@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -11,17 +11,22 @@ export class LoginPageComponent implements OnInit {
   user: {
     id: number;
   }
-  constructor(private route: ActivatedRoute) { }
+  constructor(private activeRoute: ActivatedRoute, private _route: Router) { }
 
   ngOnInit() {
     this.user = {
-      id: this.route.snapshot.params['id']
+      id: this.activeRoute.snapshot.params['id']
     }
-    this.route.params
+    this.activeRoute.params
       .subscribe((params: Params) => {
         this.user.id = params['id']
       })
 
+  }
+
+
+  routeFunction(id : number) {
+    this._route.navigate(['login', id, 'edit'], {queryParams: {allowLoading :1} , fragment: 'loading'});
   }
 
 } 

@@ -7,7 +7,7 @@ const userroutes: Routes = [
   {
     path: 'login',
     children: [
-      { path: ':id', component: LoginPageComponent }
+      { path: ':id/edit', component: LoginPageComponent }
     ]
   }]
 
