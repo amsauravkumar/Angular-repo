@@ -1,19 +1,18 @@
 <div class="header">
-  <a [routerLink]="['/home']">
+  <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">
     <div class="header_item">Home</div>
   </a>
-  <a [routerLink]="['']">
+  <a routerLinkActive="active" [routerLink]="['/team']">
     <div class="header_item">Team</div>
   </a>
-  <a [routerLink]="['']">
+  <a routerLinkActive="active" [routerLink]="['/post']">
     <div class="header_item">Post</div>
   </a>
-  <a [routerLink]="['']">
+  <a routerLinkActive="active" [routerLink]="['/contactus']">
     <div class="header_item">Contact us</div>
   </a>
-  <a [routerLink]="['/login']">
+  <a routerLinkActive="active" [routerLink]="['/login']">
     <div class="header_item">Login</div>
   </a>
 </div>
-<h1>Workinggitpppppp </h1>
 <router-outlet></router-outlet>

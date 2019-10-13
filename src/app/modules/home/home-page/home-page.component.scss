@@ -3,5 +3,10 @@ form{
 }
 
 input{
-    padding: 3px;;
+    margin-top:3px;
+    padding: 3px;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
 }

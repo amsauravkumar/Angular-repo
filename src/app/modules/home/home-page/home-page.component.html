@@ -1,10 +1,11 @@
-<form (ngSubmit)="onSubmit(faa)" #faa="ngForm">
-    <input placeholder="Name" type="text" ngModel name="name" required>
+<form (ngSubmit)="onSubmit(data)" #data="ngForm">
+
+    <input placeholder="Name" ngModel name="name" required>
     <br>
-    <input placeholder="Email" type="email" ngModel name="email" required email>
+    <input placeholder="Email" ngModel name="email" required email>
+
     <br>
 
-    <button type="submit">
-        Submit
-    </button>
+    <button [disabled]="!data.valid" type="submit">Submit</button>
+
 </form>

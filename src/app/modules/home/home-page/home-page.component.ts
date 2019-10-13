@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,15 +7,16 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-valid = false;
+  @ViewChild('data', { static: false }) ggg : NgForm; 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm){
-    console.log(form);
-    this.valid=form.valid;
+  onSubmit() {
+
+    console.log(this.ggg)
+    this.ggg.reset();
   }
 
 }

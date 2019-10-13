@@ -5,6 +5,9 @@ import { HomeModule } from './modules/home/home.module';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginModule } from './modules/login/login.module';
 import { FormsModule } from '@angular/forms';
+import { ContactusModule } from './modules/contactus/contactus.module';
+import { PostModule } from './modules/post/post.module';
+import { TeamModule } from './modules/team/team.module';
 
 const approutes : Routes = [
   {path:'', redirectTo :'home', pathMatch: 'full'}
@@ -16,7 +19,7 @@ const approutes : Routes = [
     AppComponent
   ],
   imports: [
-    BrowserModule, FormsModule , HomeModule, LoginModule, RouterModule.forRoot(approutes)
+    BrowserModule, FormsModule , HomeModule, LoginModule, ContactusModule, PostModule, TeamModule, RouterModule.forRoot(approutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
