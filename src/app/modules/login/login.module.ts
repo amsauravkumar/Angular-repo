@@ -7,7 +7,7 @@ const userroutes: Routes = [
   {
     path: 'login',
     children: [
-      { path: '', component: LoginPageComponent }
+      { path: ':id', component: LoginPageComponent }
     ]
   }]
 

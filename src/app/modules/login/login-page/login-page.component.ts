@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  user: {
+    id: number;
+  }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.user = {
+      id: this.route.snapshot.params['id']
+    }
+    this.route.params
+      .subscribe((params: Params) => {
+        this.user.id = params['id']
+      })
+
   }
 
 }
